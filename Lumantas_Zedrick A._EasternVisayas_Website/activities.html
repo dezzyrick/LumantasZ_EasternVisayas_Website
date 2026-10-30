@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Experiences - Eastern Visayas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <!-- Scrolling Banner with Happy Face Dividers -->
+    <!-- Scrolling Top Announcement Banner -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+
+            <!-- Duplicated loop for seamless scrolling -->
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/icons/logo.png" alt="Eastern Visayas Logo" class="logo-img">
+            <span>Discover Eastern Visayas</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="activities.html" class="active">Activities</a></li>
+                <li><a href="history.html">History & Culture</a></li>
+                <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Activities & Outdoor Experiences</h1>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Choose your style of travel: adventure seeking,
+            historical discovery, or culinary tasting.</p>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">Outdoor</span>
+                    <h3>Adventure & Nature</h3>
+                    <p>• Spelunking and river kayaking in the limestone caverns of Basey, Samar.</p>
+                    <p>• Waterfall chasing across the volcanic island province of Biliran.</p>
+                    <p>• Beach camping and snorkeling along Kalanggaman and Sambawan sandbars.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">Heritage</span>
+                    <h3>Culture & History</h3>
+                    <p>• Walk the historic Red Beach MacArthur Landing Memorial Park in Palo.</p>
+                    <p>• Visit Spanish colonial stone watchtowers on Capul Island.</p>
+                    <p>• Attend hands-on mat weaving workshops with Samar artisans.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <span class="card-tag">Culinary</span>
+                    <h3>Food & Dining</h3>
+                    <p>• Taste freshly cooked Binagol and Chocolate Moron in Tacloban City.</p>
+                    <p>• Experience floating restaurant dining along Sohoton River.</p>
+                    <p>• Enjoy fresh seafood grills in coastal Palompon, Leyte.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Discover Eastern Visayas Tourism Board</p>
+        <p>Contact: Zedrick.Lumantas@lsu.edu.ph | +63 9753080074</p>
+    </footer>
+    <script>
+        // Fade in smoothly as soon as DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.body.classList.add('page-loaded');
+            });
+        });
+
+        // Formal, instant-start fade out when navigating pages
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetUrl = this.getAttribute('href');
+
+                // Only run for relative local page links (not anchor hashes or external links)
+                if (targetUrl && !targetUrl.startsWith('#') && !targetUrl.startsWith('http')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    document.body.style.transform = 'translateY(-4px)';
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 250); // Snappy 250ms duration preferred by formal enterprise UI/UX
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

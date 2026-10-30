@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Eastern Visayas - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <!-- Scrolling Banner with Happy Face Dividers -->
+    <!-- Scrolling Top Announcement Banner -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+
+            <!-- Duplicated loop for seamless scrolling -->
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/icons/logo.png" alt="Eastern Visayas Logo" class="logo-img">
+            <span>Discover Eastern Visayas</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="history.html">History & Culture</a></li>
+                <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Welcome to Eastern Visayas</h1>
+        <p>Discover historical wonders, pristine islands, and thrilling adventures across Region VIII.</p>
+        <a href="destinations.html" class="cta-btn">Explore Destinations</a>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="container">
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>About Our Region</h2>
+            <div class="intro-box">
+                <p>Eastern Visayas (Region VIII) comprises three main islands—Leyte, Samar, and Biliran—surrounded by
+                    turquoise waters and rich natural landscapes. Known for its historical landmarks such as the
+                    MacArthur Leyte Landing Memorial, the iconic San Juanico Bridge, and majestic cave systems, Eastern
+                    Visayas offers an extraordinary mix of adventure, tradition, and warm hospitality.</p>
+            </div>
+        </section>
+
+        <!-- Video Feature Section -->
+        <section class="video-section">
+            <h2>Experience Eastern Visayas in Motion</h2>
+            <div class="video-container">
+                <video controls poster="assets/images/hero.jpg">
+                    <source src="assets/videos/beach.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Top Highlights Gallery Grid -->
+        <section class="gallery">
+            <h2>Top Highlights</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="assets/images/san-juanico.jpg" alt="San Juanico Bridge">
+                    <div class="card-body">
+                        <span class="card-tag">Landmark</span>
+                        <h3>San Juanico Bridge</h3>
+                        <p>The iconic bridge connecting the islands of Leyte and Samar with scenic views across the
+                            strait.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/kalanggaman.jpg" alt="Kalanggaman Island">
+                    <div class="card-body">
+                        <span class="card-tag">Island</span>
+                        <h3>Kalanggaman Island</h3>
+                        <p>World-famous for its long, crystal-clear white sandbar extending gracefully into turquoise
+                            waters.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="assets/images/sohoton.jpg" alt="Sohoton Natural Bridge National Park">
+                    <div class="card-body">
+                        <span class="card-tag">Nature</span>
+                        <h3>Sohoton Caves</h3>
+                        <p>An enchanting natural reserve featuring subterranean rivers, limestone caves, and kayaking
+                            routes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Discover Eastern Visayas Tourism Board</p>
+        <p>Contact: Zedrick.Lumantas@lsu.edu.ph | +63 9753080074</p>
+    </footer>
+    <script>
+        // Fade in smoothly as soon as DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.body.classList.add('page-loaded');
+            });
+        });
+
+        // Formal, instant-start fade out when navigating pages
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetUrl = this.getAttribute('href');
+
+                // Only run for relative local page links (not anchor hashes or external links)
+                if (targetUrl && !targetUrl.startsWith('#') && !targetUrl.startsWith('http')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    document.body.style.transform = 'translateY(-4px)';
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 250); // Snappy 250ms duration preferred by formal enterprise UI/UX
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

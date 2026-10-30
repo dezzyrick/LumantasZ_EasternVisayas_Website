@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our History & Culture - Eastern Visayas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <!-- Scrolling Banner with Happy Face Dividers -->
+    <!-- Scrolling Top Announcement Banner -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+
+            <!-- Duplicated loop for seamless scrolling -->
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/icons/logo.png" alt="Eastern Visayas Logo" class="logo-img">
+            <span>Discover Eastern Visayas</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="history.html" class="active">History & Culture</a></li>
+                <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <main class="container">
+        <h1>History & Cultural Heritage</h1>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Discover the centuries of rich history, freedom
+            battles, and cultural traditions of Region VIII.</p>
+
+        <!-- Historical Milestones Grid -->
+        <section>
+            <h2>Historical Milestones</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">1521</span>
+                        <h3>First European Contact</h3>
+                        <p>Ferdinand Magellan first anchored off the island of Homonhon in Eastern Samar, making it the
+                            gateway of early world trade and exploration in the Philippines.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">1521</span>
+                        <h3>First Christian Mass</h3>
+                        <p>Limasawa Island in Southern Leyte holds the historical distinction of being the site where
+                            the first recorded Catholic mass was celebrated in the Philippines.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">1944</span>
+                        <h3>Leyte Gulf Landing</h3>
+                        <p>General Douglas MacArthur fulfilled his famous promise "I shall return" on Red Beach in Palo,
+                            Leyte, initiating the naval battle that liberated the nation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Highlights -->
+        <section>
+            <h2>Cultural Traditions & Heritage</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">Festival</span>
+                        <h3>Pintados-Kasadyaan</h3>
+                        <p>Celebrated annually in Tacloban City, this festive event honors ancient tattoo rituals
+                            ("Pintados warriors") and regional harvest traditions through street dancing.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">Craft</span>
+                        <h3>Tikog Mat Weaving</h3>
+                        <p>Basey, Samar is renowned for intricate hand-woven mats, bags, and wall decorations crafted
+                            from natural tikog reeds passed down through generations.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">Cuisine</span>
+                        <h3>Traditional Waray Flavors</h3>
+                        <p>Famous local delicacies like Binagol, Chocolate Moron, and Sagmani blend local cocoa,
+                            glutinous rice, and taro root wrapped in banana leaves.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Discover Eastern Visayas Tourism Board</p>
+        <p>Contact: Zedrick.Lumantas@lsu.edu.ph | +63 9753080074</p>
+    </footer>
+    <script>
+        // Fade in smoothly as soon as DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.body.classList.add('page-loaded');
+            });
+        });
+
+        // Formal, instant-start fade out when navigating pages
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetUrl = this.getAttribute('href');
+
+                // Only run for relative local page links (not anchor hashes or external links)
+                if (targetUrl && !targetUrl.startsWith('#') && !targetUrl.startsWith('http')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    document.body.style.transform = 'translateY(-4px)';
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 250); // Snappy 250ms duration preferred by formal enterprise UI/UX
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

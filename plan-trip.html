@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip - Eastern Visayas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <!-- Scrolling Banner with Happy Face Dividers -->
+    <!-- Scrolling Top Announcement Banner -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+
+            <!-- Duplicated loop for seamless scrolling -->
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/icons/logo.png" alt="Eastern Visayas Logo" class="logo-img">
+            <span>Discover Eastern Visayas</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="history.html">History & Culture</a></li>
+                <li><a href="plan-trip.html" class="active">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Page Hero Banner -->
+        <div class="planner-hero">
+            <h1>Start Your Eastern Visayas Journey</h1>
+            <p>Customize your itinerary, estimate travel costs, and book your guided tour with local travel experts.</p>
+        </div>
+
+        <!-- Quick Travel Highlights / Perks -->
+        <section>
+            <div class="grid">
+                <div class="card perk-card">
+                    <div class="card-body text-center">
+                        <div class="perk-icon">🏝️</div>
+                        <h3>Island Hopping</h3>
+                        <p>Direct boat transfers to Kalanggaman, Sambawan, and Canigao Islands.</p>
+                    </div>
+                </div>
+                <div class="card perk-card">
+                    <div class="card-body text-center">
+                        <div class="perk-icon">🗺️</div>
+                        <h3>Guided Tours</h3>
+                        <p>Certified local Waray guides for safe cave spelunking and river kayaking.</p>
+                    </div>
+                </div>
+                <div class="card perk-card">
+                    <div class="card-body text-center">
+                        <div class="perk-icon">🚐</div>
+                        <h3>Easy Transit</h3>
+                        <p>Private van rentals and shuttle routes connecting Tacloban, Leyte, and Samar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Budget Estimator -->
+        <section class="calculator-box">
+            <h2>Estimated Trip Cost Calculator</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Get an instant rough estimate for your Region
+                VIII getaway.</p>
+
+            <div class="calc-grid">
+                <div class="form-group">
+                    <label for="calc-days">Days of Travel</label>
+                    <input type="number" id="calc-days" value="3" min="1" max="14" oninput="calculateTripCost()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-people">Number of Guests</label>
+                    <input type="number" id="calc-people" value="2" min="1" max="20" oninput="calculateTripCost()">
+                </div>
+                <div class="form-group">
+                    <label for="calc-style">Travel Style</label>
+                    <select id="calc-style" onchange="calculateTripCost()">
+                        <option value="2500">Backpacker / Budget (₱2,500/day per person)</option>
+                        <option value="4500" selected>Standard Comfort (₱4,500/day per person)</option>
+                        <option value="8000">Luxury / Private Resort (₱8,000/day per person)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="calc-result">
+                <span>Estimated Total Budget:</span>
+                <strong id="total-cost">₱27,000 PHP</strong>
+            </div>
+        </section>
+
+        <!-- Curated 3-Day Itinerary Table -->
+        <section>
+            <h2>Recommended 3-Day Master Itinerary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Morning Activity</th>
+                        <th>Afternoon Highlights</th>
+                        <th>Evening Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Day 1</strong></td>
+                        <td>Tacloban Airport Pickup & Hotel Check-in</td>
+                        <td>MacArthur Landing Memorial & San Juanico Bridge Sunset Tour</td>
+                        <td>Authentic Waray seafood dinner & tasting Chocolate Moron</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 2</strong></td>
+                        <td>Scenic morning drive to Palompon, Leyte</td>
+                        <td>Kalanggaman Sandbar excursion, snorkeling, & kayaking</td>
+                        <td>Mainland return & relaxing beachfront dinner</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Day 3</strong></td>
+                        <td>Guided Sohoton River & Cave boat expedition (Basey, Samar)</td>
+                        <td>Artisan souvenir shopping for handwoven Tikog mats</td>
+                        <td>Airport transfer for departure</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Smart Packing & Travel Guidelines -->
+        <section>
+            <h2>Travel Essentials & Tips</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">Pro Tip</span>
+                        <h3>Smart Advice</h3>
+                        <p>• Book Kalanggaman Island boat slots early with the Palompon Tourism Office.</p>
+                        <p>• Carry Philippine Peso cash (₱); ATMs are sparse in small island municipalities.</p>
+                        <p>• Respect marine sanctuaries and leave no trace during river/cave explorations.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <span class="card-tag">Checklist</span>
+                        <h3>Packing Checklist</h3>
+                        <p>• Waterproof dry bags for phone, camera, and travel documents.</p>
+                        <p>• Sturdy aqua shoes or water sandals for walking inside limestone caves.</p>
+                        <p>• Coral-friendly sunscreen, brimmed hat, and eco-friendly insect repellent.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- High-Conversion Travel Inquiry Form -->
+        <section>
+            <div class="inquiry-wrapper">
+                <h2>Custom Trip Inquiry & Reservation</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.9;">Fill out the form below and our regional travel
+                    consultants will craft your personalized itinerary within 24 hours.</p>
+
+                <form action="#" method="POST" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="e.g., Maria Santos" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="maria@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="visit-date">Target Travel Date</label>
+                            <input type="date" id="visit-date" name="visit-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers</label>
+                            <input type="number" id="travelers" name="travelers" min="1" value="2" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="questions">Preferred Destinations & Special Requests</label>
+                        <textarea id="questions" name="questions" rows="4"
+                            placeholder="Let us know if you want private transport, diving gear, or specific hotel preferences..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Request Personalized Quote</button>
+                </form>
+                <div id="form-message" class="form-success-msg" style="display: none;">
+                    Thank you! Your inquiry has been sent. We will contact you shortly with a customized travel quote.
+                </div>
+                <div class="gcash-details">
+                    <div class="detail-row">
+                        <span>Account Name:</span>
+                        <!-- Change this to your exact GCash registered name -->
+                        <strong>ZEDRICK LUMANTAS</strong>
+                    </div>
+                    <div class="detail-row">
+                        <span>GCash Number:</span>
+                        <!-- Change this to your actual 11-digit GCash mobile number -->
+                        <strong class="number-field">0975-308-0074</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Discover Eastern Visayas Tourism Board</p>
+        <p>Contact: Zedrick.Lumantas@lsu.edu.ph | +63 9753080074</p>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function calculateTripCost() {
+            const days = parseInt(document.getElementById('calc-days').value) || 1;
+            const guests = parseInt(document.getElementById('calc-people').value) || 1;
+            const rate = parseInt(document.getElementById('calc-style').value) || 4500;
+
+            const total = days * guests * rate;
+            document.getElementById('total-cost').innerText = '₱' + total.toLocaleString('en-US') + ' PHP';
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('form-message').style.display = 'block';
+            e.target.reset();
+        }
+    </script>
+    <script>
+        // Fade in smoothly as soon as DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.body.classList.add('page-loaded');
+            });
+        });
+
+        // Formal, instant-start fade out when navigating pages
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetUrl = this.getAttribute('href');
+
+                // Only run for relative local page links (not anchor hashes or external links)
+                if (targetUrl && !targetUrl.startsWith('#') && !targetUrl.startsWith('http')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    document.body.style.transform = 'translateY(-4px)';
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 250); // Snappy 250ms duration preferred by formal enterprise UI/UX
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

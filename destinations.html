@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Destinations - Eastern Visayas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+
+<body>
+    <!-- Scrolling Banner with Happy Face Dividers -->
+    <!-- Scrolling Top Announcement Banner -->
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+
+            <!-- Duplicated loop for seamless scrolling -->
+            <span class="ticker-item">Welcome to Eastern Visayas</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Explore Kalanggaman Island & San Juanico Bridge</span>
+            <span class="ticker-symbol">😃</span>
+            <span class="ticker-item">Plan Your Trip Today for Exclusive Tours</span>
+            <span class="ticker-symbol">😃</span>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/icons/logo.png" alt="Eastern Visayas Logo" class="logo-img">
+            <span>Discover Eastern Visayas</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html" class="active">Destinations</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="history.html">History & Culture</a></li>
+                <li><a href="plan-trip.html">Plan Your Trip</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <!-- Page Title & Intro -->
+        <div class="planner-hero" style="margin-bottom: 2rem;">
+            <h1>Explore Top Region VIII Destinations</h1>
+            <p>From world-famous white sandbars to majestic cave networks and historic bridges, plan your island stops
+                below.</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterDestinations('all', this)">All Destinations</button>
+            <button class="filter-btn" onclick="filterDestinations('island', this)">Islands & Beaches</button>
+            <button class="filter-btn" onclick="filterDestinations('landmark', this)">Landmarks</button>
+            <button class="filter-btn" onclick="filterDestinations('nature', this)">Caves & Nature</button>
+        </div>
+
+        <!-- Destination Cards Grid -->
+        <div class="grid">
+            <!-- Spot 1: Kalanggaman Island -->
+            <div class="card destination-item island">
+                <div class="card-img-wrapper">
+                    <img src="assets/images/kalanggaman.jpg" alt="Kalanggaman Island">
+                    <span class="img-badge">Must Visit</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Island</span>
+                    <h2>Kalanggaman Island</h2>
+                    <p>Kalanggaman is world-famous for its pristine, long white sandbar stretching into clear turquoise
+                        waters. An unpopulated paradise perfect for swimming, beach camping, kayaking, and day trips.
+                    </p>
+
+                    <div class="destination-meta">
+                        <p><strong>📍 Location:</strong> Palompon, Leyte</p>
+                        <p><strong>⭐ Highlight:</strong> 750m White Sandbar</p>
+                        <p><strong>🚤 Access:</strong> 45-min boat from Palompon Port</p>
+                    </div>
+
+                    <a href="plan-trip.html" class="cta-btn card-btn">Book Boat Slot</a>
+                </div>
+            </div>
+
+            <!-- Spot 2: San Juanico Bridge -->
+            <div class="card destination-item landmark">
+                <div class="card-img-wrapper">
+                    <img src="assets/images/san-juanico.jpg" alt="San Juanico Bridge">
+                    <span class="img-badge">Iconic Landmark</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Landmark</span>
+                    <h2>San Juanico Bridge</h2>
+                    <p>Spanning the San Juanico Strait, this 2.16-kilometer engineering marvel connects Leyte and Samar.
+                        Experience breathtaking ocean views during the day and brilliant light shows at night.</p>
+
+                    <div class="destination-meta">
+                        <p><strong>📍 Location:</strong> Tacloban City / Samar</p>
+                        <p><strong>⭐ Highlight:</strong> Night LED Light Show</p>
+                        <p><strong>🚗 Access:</strong> 15-min drive from Tacloban City</p>
+                    </div>
+
+                    <a href="plan-trip.html" class="cta-btn card-btn">Plan Visit</a>
+                </div>
+            </div>
+
+            <!-- Spot 3: Sohoton Caves -->
+            <div class="card destination-item nature">
+                <div class="card-img-wrapper">
+                    <img src="assets/images/sohoton.jpg" alt="Sohoton Caves">
+                    <span class="img-badge">Adventure</span>
+                </div>
+                <div class="card-body">
+                    <span class="card-tag">Nature</span>
+                    <h2>Sohoton Natural Bridge & Caves</h2>
+                    <p>A protected national park boasting subterranean rivers, towering limestone archways, and cave
+                        systems. Take guided kayak trips through emerald rivers surrounded by untouched jungle.</p>
+
+                    <div class="destination-meta">
+                        <p><strong>📍 Location:</strong> Basey, Samar</p>
+                        <p><strong>⭐ Highlight:</strong> River Kayaking & Spelunking</p>
+                        <p><strong>⛵ Access:</strong> Guided boat tour from Basey Wharf</p>
+                    </div>
+
+                    <a href="plan-trip.html" class="cta-btn card-btn">Reserve Guided Tour</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Discover Eastern Visayas Tourism Board</p>
+        <p>Contact: zedrick.lumantas@lsu.edu.ph | +63 (053) 888-1234</p>
+    </footer>
+
+    <!-- Interactive Filter Script -->
+    <script>
+        function filterDestinations(category, button) {
+            // Update active state on filter buttons
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Show / Hide matching destination cards
+            const items = document.querySelectorAll('.destination-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script>
+        // Fade in smoothly as soon as DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            requestAnimationFrame(() => {
+                document.body.classList.add('page-loaded');
+            });
+        });
+
+        // Formal, instant-start fade out when navigating pages
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const targetUrl = this.getAttribute('href');
+
+                // Only run for relative local page links (not anchor hashes or external links)
+                if (targetUrl && !targetUrl.startsWith('#') && !targetUrl.startsWith('http')) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    document.body.style.transform = 'translateY(-4px)';
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 250); // Snappy 250ms duration preferred by formal enterprise UI/UX
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
